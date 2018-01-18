@@ -1,0 +1,14 @@
+<div class="dialog-wrapper">
+    <dialog #dialog class="dialog-{{size}}" [ngClass]="{'dialog-animate': animate, 'dialog-shown': isShown }">
+        <!-- close button -->
+        <div class="close-btn" (click)="closeDialog('temp')">
+            x
+        </div>
+        <ng-content select=".dialog-header">            
+        </ng-content>
+        <ng-content select=".dialog-body">
+        </ng-content>
+        <ng-content select=".dialog-footer">
+        </ng-content>
+    </dialog>
+</div>

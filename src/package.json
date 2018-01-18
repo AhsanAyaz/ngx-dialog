@@ -1,0 +1,28 @@
+{
+  "name": "ngx-dialog",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahsanayaz/ngx-dialog"
+  },
+  "author": {
+    "name": "Ahsan Ayaz",
+    "email": "ahsan.ubitian@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahsanayaz/ngx-dialog/issues"
+  },
+  "main": "ngx-dialog.umd.js",
+  "module": "ngx-dialog.js",
+  "jsnext:main": "ngx-dialog.js",
+  "typings": "ngx-dialog.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

@@ -1,0 +1,85 @@
+.dialog-wrapper {
+    dialog {
+        position: relative;
+        width: auto;
+        margin: 10px;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 0;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+        min-height: 200px;
+        transition: transform .2s ease-out;
+        transform: translate(0,-25%);
+        z-index: 10001;
+        .close-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            &:hover {
+                color: #888;
+            }
+        }
+
+        &.dialog-shown {
+            -webkit-transform: translate(0,0);
+            -o-transform: translate(0,0);
+            transform: translate(0,0);
+        }
+
+        ::ng-deep .dialog-header {
+            color: rgba(0,0,0,.65);
+            font-weight: 500;
+            text-transform: none;
+            position: relative;
+            display: block;
+            padding: 13px 16px;
+            font-size: 27px;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        
+        ::ng-deep .dialog-body {
+            font-size: 16px;
+            position: relative;
+            float: none;
+            line-height: normal;
+            vertical-align: top;
+            text-align: left;
+            display: inline-block;
+            margin: 0;
+            padding: 13px 16px;
+            font-weight: 400;
+            color: rgba(0,0,0,.64);
+            max-width: calc(100% - 20px);
+            overflow-wrap: break-word;
+            box-sizing: border-box;
+        }
+
+        &::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+
+@media (min-width: 576px){
+    .dialog-wrapper {
+        dialog {
+            max-width: 500px;
+            margin: 30px auto;
+            &.dialog-s {
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .dialog-wrapper {
+        dialog {
+            &.dialog-l {
+                max-width: 800px;
+            }
+        }
+    }
+}
